@@ -21,8 +21,9 @@ class SQLiteCRUD:
     def select(self, table_name, columns=None, where=None, join=None):
         columns_str = "*" if not columns else ", ".join(columns)
         where_str = "" if not where else f"WHERE {where}"
-        join_str = "" if not join else f"{join}"
+        join_str = "" if not join else f" {join}"
         query = f"SELECT {columns_str} FROM {table_name} {join_str} {where_str}"
+        print(query)
         self.cursor.execute(query)
         return self.cursor.fetchall()
     

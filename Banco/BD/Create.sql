@@ -41,12 +41,15 @@ CREATE TABLE dadosAluno(
     objetivos INTEGER,
     academia INTEGER, 
     instrutor INTEGER,
+    historico INTEGER,
     FOREIGN KEY(academia) 
         REFERENCES academia (id),
     FOREIGN KEY(instrutor) 
         REFERENCES instrutor (id),
     FOREIGN KEY (objetivos)
-        REFERENCES objetivo (id)
+        REFERENCES objetivo (id),
+    FOREIGN KEY (historico)
+        REFERENCES alunoHistorico (id)
 )
 
 CREATE TABLE objetivo(
@@ -56,8 +59,10 @@ CREATE TABLE objetivo(
     gorduraCorporal REAL,
     aguaCorporal REAL,
     tipo TEXT,
-    evolucao REAL
+    evolucao REAL,
+    dateStamp DATETIME
 )
+
 CREATE TABLE grupoMuscular(
     id INTEGER PRIMARY KEY,
     nome TEXT

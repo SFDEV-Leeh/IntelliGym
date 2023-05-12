@@ -1,0 +1,64 @@
+{
+	"info": {
+		"_postman_id": "5261b686-5427-4aa2-9e6d-adb1632ef754",
+		"name": "IntelliGym",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27162815"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Autorização",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "New Folder",
+			"item": [
+				{
+					"name": "Busca Treino",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY4MzkwODg4MSwianRpIjoiYTExNmNlMGUtMWI5OC00YjZlLWEwNDktZDE2MDFjNDQ5ZWQwIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6InVzZXJuYW1lIiwibmJmIjoxNjgzOTA4ODgxLCJleHAiOjE2ODM5MDk3ODF9.-uAENedfsP5j-IXIV5ooirh7mw-xs2RWFAnEs2iBVR4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/treino",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"treino"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
